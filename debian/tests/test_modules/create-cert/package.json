@@ -1,0 +1,74 @@
+{
+  "_from": "create-cert@^1.0.2",
+  "_id": "create-cert@1.0.6",
+  "_inBundle": false,
+  "_integrity": "sha1-ftAf/3+fDOpQCrpe/xGa9MjehPY=",
+  "_location": "/create-cert",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "create-cert@^1.0.2",
+    "name": "create-cert",
+    "escapedName": "create-cert",
+    "rawSpec": "^1.0.2",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.2"
+  },
+  "_requiredBy": [
+    "/create-test-server"
+  ],
+  "_resolved": "https://registry.npmjs.org/create-cert/-/create-cert-1.0.6.tgz",
+  "_shasum": "7ed01fff7f9f0cea500aba5eff119af4c8de84f6",
+  "_spec": "create-cert@^1.0.2",
+  "_where": "/home/xavier/dev/debian/src/pkg-js/packages/node-mimic-response/node_modules/create-test-server",
+  "author": {
+    "name": "Luke Childs",
+    "email": "lukechilds123@gmail.com",
+    "url": "http://lukechilds.co.uk"
+  },
+  "bugs": {
+    "url": "https://github.com/lukechilds/create-cert/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "pem": "^1.9.7",
+    "pify": "^3.0.0"
+  },
+  "deprecated": false,
+  "description": "Super simple self signed certificates",
+  "devDependencies": {
+    "ava": "^0.20.0",
+    "coveralls": "^2.13.1",
+    "date-fns": "^1.28.5",
+    "eslint-config-xo-lukechilds": "^1.0.0",
+    "got": "^7.0.0",
+    "nyc": "^11.0.2",
+    "pem": "^1.9.7",
+    "pify": "^3.0.0",
+    "xo": "^0.19.0"
+  },
+  "homepage": "https://github.com/lukechilds/create-cert",
+  "keywords": [
+    "self",
+    "signed",
+    "certificate",
+    "cert",
+    "ssl"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "create-cert",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukechilds/create-cert.git"
+  },
+  "scripts": {
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test": "xo && nyc ava"
+  },
+  "version": "1.0.6",
+  "xo": {
+    "extends": "xo-lukechilds"
+  }
+}

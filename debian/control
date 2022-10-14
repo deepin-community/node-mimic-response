@@ -1,0 +1,30 @@
+Source: node-mimic-response
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Nirmal K V <nirmalkvaduva@gmail.com>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , jest <!nocheck>
+ , node-express <!nocheck>
+ , node-iconv <!nocheck>
+ , node-os-tmpdir <!nocheck>
+ , node-p-timeout <!nocheck>
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/js-team/node-mimic-response
+Vcs-Git: https://salsa.debian.org/js-team/node-mimic-response.git
+Homepage: https://github.com/sindresorhus/mimic-response
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-mimic-response
+Architecture: all
+Depends: ${misc:Depends}
+Multi-Arch: foreign
+Description: Mimic a Node.js HTTP response stream
+ Make a function mimic another one.
+ .
+ Useful when you wrap a function and like to preserve the original name and
+ other properties.
+ .
+ Node.js is an event-based server-side JavaScript engine.

@@ -1,0 +1,81 @@
+{
+  "_from": "create-test-server@^2.4.0",
+  "_id": "create-test-server@2.4.0",
+  "_inBundle": false,
+  "_integrity": "sha512-Toa7Y+X+qEvkkwjS3tx0n+DMwGtiu+YC+/ZO21/E0l2kjH6gMuojmb9cw9blfW7QyyPosc0IvUyDlRPn+3B15A==",
+  "_location": "/create-test-server",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "create-test-server@^2.4.0",
+    "name": "create-test-server",
+    "escapedName": "create-test-server",
+    "rawSpec": "^2.4.0",
+    "saveSpec": null,
+    "fetchSpec": "^2.4.0"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/create-test-server/-/create-test-server-2.4.0.tgz",
+  "_shasum": "fc89b3b5a6fdfa956abf0d34a0392f9dfa03ecbc",
+  "_spec": "create-test-server@^2.4.0",
+  "_where": "/home/xavier/dev/debian/src/pkg-js/packages/node-mimic-response",
+  "author": {
+    "name": "Luke Childs",
+    "email": "lukechilds123@gmail.com",
+    "url": "http://lukechilds.co.uk"
+  },
+  "bugs": {
+    "url": "https://github.com/lukechilds/create-test-server/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "create-cert": "^1.0.2",
+    "express": "^4.15.3",
+    "pify": "^3.0.0"
+  },
+  "deprecated": false,
+  "description": "Creates a minimal Express server for testing",
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "coveralls": "^3.0.0",
+    "eslint-config-xo-lukechilds": "^1.0.0",
+    "got": "^8.0.0",
+    "nyc": "^11.0.2",
+    "xo": "^0.19.0"
+  },
+  "homepage": "https://github.com/lukechilds/create-test-server",
+  "keywords": [
+    "create",
+    "test",
+    "server",
+    "mock",
+    "nock",
+    "testing",
+    "ci",
+    "unit",
+    "tests",
+    "ssl",
+    "https",
+    "http",
+    "express"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "create-test-server",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukechilds/create-test-server.git"
+  },
+  "scripts": {
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test": "xo && nyc ava"
+  },
+  "version": "2.4.0",
+  "xo": {
+    "extends": "xo-lukechilds"
+  }
+}

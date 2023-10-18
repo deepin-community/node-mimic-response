@@ -1,37 +1,5 @@
 {
-  "_from": "pem@^1.9.7",
-  "_id": "pem@1.14.4",
-  "_inBundle": false,
-  "_integrity": "sha512-v8lH3NpirgiEmbOqhx0vwQTxwi0ExsiWBGYh0jYNq7K6mQuO4gI6UEFlr6fLAdv9TPXRt6GqiwE37puQdIDS8g==",
-  "_location": "/pem",
-  "_phantomChildren": {
-    "isexe": "2.0.0"
-  },
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "pem@^1.9.7",
-    "name": "pem",
-    "escapedName": "pem",
-    "rawSpec": "^1.9.7",
-    "saveSpec": null,
-    "fetchSpec": "^1.9.7"
-  },
-  "_requiredBy": [
-    "/create-cert"
-  ],
-  "_resolved": "https://registry.npmjs.org/pem/-/pem-1.14.4.tgz",
-  "_shasum": "a68c70c6e751ccc5b3b5bcd7af78b0aec1177ff9",
-  "_spec": "pem@^1.9.7",
-  "_where": "/home/xavier/dev/debian/src/pkg-js/packages/node-mimic-response/node_modules/create-cert",
-  "author": {
-    "name": "Andris Reinman",
-    "email": "andris@kreata.ee"
-  },
-  "bugs": {
-    "url": "https://github.com/Dexus/pem/issues"
-  },
-  "bundleDependencies": false,
+  "author": "Andris Reinman <andris@kreata.ee>",
   "contributors": [
     {
       "name": "Josef Fröhle",
@@ -39,14 +7,44 @@
       "url": "https://www.josef-froehle.de/"
     }
   ],
+  "license": "MIT",
+  "name": "pem",
+  "description": "Create private keys and certificates with node.js and io.js",
+  "version": "1.14.6",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dexus/pem.git"
+  },
+  "main": "lib/pem",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "documentation": "npm run docco --silent && npm run jsdoc --silent",
+    "docco": "docco -l parallel -o docs/docco lib/helper.js lib/openssl.js lib/pem.js",
+    "jsdoc": "jsdoc -c jsdoc.json",
+    "changelog": "auto-changelog --output HISTORY.md",
+    "coverage": "cross-env NODE_ENV=development nyc ./node_modules/.bin/_mocha --opts mocha.opts $(find . -type f -name '*.spec.js'  ! -path './nyc_output/*' ! -path './coverage/*' ! -path './node_modules/*')",
+    "semantic-release": "semantic-release",
+    "lint": "eslint --fix --config=./.eslintrc.js lib/*.js *.md *.json lib/*.js test/*.js test/*.spec.js",
+    "test": "npm run lint --silent && npm run coverage --silent"
+  },
+  "nyc": {
+    "reporter": [
+      "html",
+      "text"
+    ],
+    "exclude": [
+      "**/*.spec.js",
+      "test/pem.helper.js"
+    ]
+  },
   "dependencies": {
     "es6-promisify": "^6.0.0",
     "md5": "^2.2.1",
     "os-tmpdir": "^1.0.1",
     "which": "^2.0.2"
   },
-  "deprecated": false,
-  "description": "Create private keys and certificates with node.js and io.js",
   "devDependencies": {
     "@deineagenturug/docdash": "^0.4.2",
     "@semantic-release/changelog": "^3.0.6",
@@ -77,20 +75,6 @@
   "engines": {
     "node": ">=6.0.0"
   },
-  "homepage": "https://github.com/Dexus/pem#readme",
-  "license": "MIT",
-  "main": "lib/pem",
-  "name": "pem",
-  "nyc": {
-    "reporter": [
-      "html",
-      "text"
-    ],
-    "exclude": [
-      "**/*.spec.js",
-      "test/pem.helper.js"
-    ]
-  },
   "release": {
     "debug": false,
     "verifyConditions": [
@@ -118,20 +102,5 @@
       "@semantic-release/npm",
       "@semantic-release/github"
     ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Dexus/pem.git"
-  },
-  "scripts": {
-    "changelog": "auto-changelog --output HISTORY.md",
-    "coverage": "cross-env NODE_ENV=development nyc ./node_modules/.bin/_mocha --opts mocha.opts $(find . -type f -name '*.spec.js'  ! -path './nyc_output/*' ! -path './coverage/*' ! -path './node_modules/*')",
-    "docco": "docco -l parallel -o docs/docco lib/helper.js lib/openssl.js lib/pem.js",
-    "documentation": "npm run docco --silent && npm run jsdoc --silent",
-    "jsdoc": "jsdoc -c jsdoc.json",
-    "lint": "eslint --fix --config=./.eslintrc.js lib/*.js *.md *.json lib/*.js test/*.js test/*.spec.js",
-    "semantic-release": "semantic-release",
-    "test": "npm run lint --silent && npm run coverage --silent"
-  },
-  "version": "1.14.4"
+  }
 }

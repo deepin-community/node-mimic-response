@@ -1,3 +1,27 @@
+node-mimic-response (3.1.0-8) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.6.1
+  * Fix test for openssl >= 3 (Closes: #1011912)
+
+ -- Yadd <yadd@debian.org>  Wed, 01 Jun 2022 14:18:44 +0200
+
+node-mimic-response (3.1.0-7) unstable; urgency=medium
+
+  * Team upload
+  * Reupload to force rebuild
+
+ -- Yadd <yadd@debian.org>  Sun, 21 Nov 2021 08:18:22 +0100
+
+node-mimic-response (3.1.0-6) unstable; urgency=medium
+
+  * Team upload
+  * Fix GitHub tags regex
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix filenamemangle
+
+ -- Yadd <yadd@debian.org>  Sat, 20 Nov 2021 16:34:20 +0100
+
 node-mimic-response (3.1.0-5) unstable; urgency=medium
 
   * Team upload

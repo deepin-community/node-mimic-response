@@ -10,7 +10,7 @@ Build-Depends: debhelper-compat (= 13)
  , node-iconv <!nocheck>
  , node-os-tmpdir <!nocheck>
  , node-p-timeout <!nocheck>
-Standards-Version: 4.5.1
+Standards-Version: 4.6.1
 Vcs-Browser: https://salsa.debian.org/js-team/node-mimic-response
 Vcs-Git: https://salsa.debian.org/js-team/node-mimic-response.git
 Homepage: https://github.com/sindresorhus/mimic-response
